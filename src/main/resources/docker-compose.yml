@@ -1,0 +1,80 @@
+services:
+  mc-lobby:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      PAPER_CHANNEL: experimental      
+      VERSION: "1.21.4"
+      VIEW_DISTANCE: 10
+      MEMORY: 1500M
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  mc-soul:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      PAPER_CHANNEL: experimental
+      VERSION: "1.21.4"
+      VIEW_DISTANCE: 10
+      MEMORY: 7000M
+    ports:
+      - "25564:25564"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  mc-event:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      PAPER_CHANNEL: experimental
+      VERSION: "1.21.4"
+      VIEW-DISTANCE: 10
+      MEMORY: 2500M
+    ports:
+      - "25563:25563"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  mc-build:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      PAPER_CHANNEL: experimental
+      VERSION: "1.21.4"
+      VIEW_DISTANCE: 10
+      MEMORY: 1500M
+    ports:
+      - "25562:25562"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+  mc-test:
+    image: itzg/minecraft-server
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: "true"
+      TYPE: PAPER
+      PAPER_CHANNEL: experimental
+      VERSION: "1.21.4"
+      VIEW_DISTANCE: 10
+      MEMORY: 1500M
+    ports:
+      - "25561:25561"
+    volumes:
+      - ./data:/data

@@ -1,15 +1,15 @@
-import xyz.jpenilla.resourcefactory.bukkit.BukkitPluginYaml
+//import xyz.jpenilla.resourcefactory.bukkit.BukkitPluginYaml
 
 plugins {
   `java-library`
   id("io.papermc.paperweight.userdev") version "1.7.3"
-  id("xyz.jpenilla.run-paper") version "2.3.1" // Adds runServer and runMojangMappedServer tasks for testing
-  id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.2.0" // Generates plugin.yml based on the Gradle config
+  //id("xyz.jpenilla.run-paper") version "2.3.1" // Adds runServer and runMojangMappedServer tasks for testing
+  //id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.2.0" // Generates plugin.yml based on the Gradle config
 }
 
-group = "io.papermc.paperweight"
-version = "1.0.0-SNAPSHOT"
-description = "Test plugin for paperweight-userdev"
+group = "de.elia"
+version = "1.0.0-ALPHA"
+description = "This is a soul plugin for the SoulSMP-Server"
 
 java {
   // Configure the java toolchain. This allows gradle to auto-provision JDK 21 on systems that only have JDK 11 installed for example.
@@ -28,9 +28,17 @@ tasks.assemble {
   dependsOn(tasks.reobfJar)
 }
  */
+repositories {
+  flatDir {
+    dirs("libraries")
+  }
+}
 
 dependencies {
-  paperweight.paperDevBundle("1.21.1-R0.1-SNAPSHOT")
+  paperweight.paperDevBundle("1.21.4-R0.1-20241205.222346-7")
+  implementation("de.elia.api:SoulLibrary:4.0.0")
+  implementation("org.apache.logging.log4j:log4j-api:3.0.0-beta2")
+  implementation("org.apache.logging.log4j:log4j-core:3.0.0-beta2")
   // paperweight.foliaDevBundle("1.21.1-R0.1-SNAPSHOT")
   // paperweight.devBundle("com.example.paperfork", "1.21.1-R0.1-SNAPSHOT")
 }
@@ -57,9 +65,11 @@ tasks {
 
 // Configure plugin.yml generation
 // - name, version, and description are inherited from the Gradle project.
+/*
 bukkitPluginYaml {
   main = "io.papermc.paperweight.testplugin.TestPlugin"
   load = BukkitPluginYaml.PluginLoadOrder.STARTUP
   authors.add("Author")
   apiVersion = "1.21"
 }
+ */

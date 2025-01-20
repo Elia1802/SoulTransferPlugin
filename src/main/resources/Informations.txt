@@ -1,0 +1,17 @@
+All Ports for the Server
+
+Lobby:  25565
+Soul: 25564
+Event: 25563
+Build: 25562
+Test: 25561
+
+Max RAM of the Servers
+
+Lobby: 1500M
+Soul: 7000M
+Event: 2500M
+Build: 1500M
+Test: 1500M
+
+2000M = RESERVE

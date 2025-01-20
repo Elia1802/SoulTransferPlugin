@@ -1,0 +1,11 @@
+name: SoulTransferPlugin
+bootstrapper: de.elia.Bootstrapper
+loader: de.elia.Loader
+main: de.elia.Main
+api-version: '1.21'
+version: '1.0.0-ALPHA'
+authors:
+  - Elia
+description: Transfer players to an other server
+permissions:
+has-open-classloader: true
