@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "de.elia"
-version = "1.0.0-ALPHA"
+version = "1.1.0"
 description = "This is a soul plugin for the SoulSMP-Server"
 
 java {
@@ -36,7 +36,7 @@ repositories {
 
 dependencies {
   paperweight.paperDevBundle("1.21.4-R0.1-20241205.222346-7")
-  implementation("de.elia.api:SoulLibrary:4.0.0")
+  implementation("de.elia.api:SoulLibrary:5.0.0-dev")
   implementation("org.apache.logging.log4j:log4j-api:3.0.0-beta2")
   implementation("org.apache.logging.log4j:log4j-core:3.0.0-beta2")
   // paperweight.foliaDevBundle("1.21.1-R0.1-SNAPSHOT")

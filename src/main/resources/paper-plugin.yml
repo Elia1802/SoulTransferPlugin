@@ -3,7 +3,7 @@ bootstrapper: de.elia.Bootstrapper
 loader: de.elia.Loader
 main: de.elia.Main
 api-version: '1.21'
-version: '1.0.0-ALPHA'
+version: '1.1.0'
 authors:
   - Elia
 description: Transfer players to an other server
