@@ -1,4 +1,4 @@
-package de.elia;
+package de.elia.register;
 
 import de.elia.commands.connect.ConnectCommand;
 import de.elia.commands.hub.HubCommand;
