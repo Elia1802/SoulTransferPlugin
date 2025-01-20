@@ -18,7 +18,7 @@ public class Bootstrapper implements PluginBootstrap {
   public void bootstrap(@NotNull BootstrapContext bootstrapContext) {
     var logger = bootstrapContext.getLogger();
     logger.info("Boot " + NAME + "...");
-    logger.warn("This is the alpha build of " + NAME + "!");
+    //logger.warn("This is the alpha build of " + NAME + "!");
   }
 
   @Override
